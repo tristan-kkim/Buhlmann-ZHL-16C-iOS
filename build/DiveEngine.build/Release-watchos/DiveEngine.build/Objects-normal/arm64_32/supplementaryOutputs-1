@@ -1,0 +1,12 @@
+{
+  "/Users/cortexys/Projects/dive-computer-watch/DiveEngine/Sources/DiveEngine/Engine/BuhlmannWrapper.swift" : {
+    "abi-baseline-json" : "/Users/cortexys/Projects/dive-computer-watch/DiveEngine/build/DiveEngine.build/Release-watchos/DiveEngine.build/Objects-normal/arm64_32/DiveEngine.abi.json",
+    "const-values" : "/Users/cortexys/Projects/dive-computer-watch/DiveEngine/build/DiveEngine.build/Release-watchos/DiveEngine.build/Objects-normal/arm64_32/DiveEngine-primary.swiftconstvalues",
+    "dependencies" : "/Users/cortexys/Projects/dive-computer-watch/DiveEngine/build/DiveEngine.build/Release-watchos/DiveEngine.build/Objects-normal/arm64_32/DiveEngine-primary.d",
+    "diagnostics" : "/Users/cortexys/Projects/dive-computer-watch/DiveEngine/build/DiveEngine.build/Release-watchos/DiveEngine.build/Objects-normal/arm64_32/DiveEngine-primary.dia",
+    "objc-header" : "/Users/cortexys/Projects/dive-computer-watch/DiveEngine/build/DiveEngine.build/Release-watchos/DiveEngine.build/Objects-normal/arm64_32/DiveEngine-Swift.h",
+    "swiftdoc" : "/Users/cortexys/Projects/dive-computer-watch/DiveEngine/build/DiveEngine.build/Release-watchos/DiveEngine.build/Objects-normal/arm64_32/DiveEngine.swiftdoc",
+    "swiftmodule" : "/Users/cortexys/Projects/dive-computer-watch/DiveEngine/build/DiveEngine.build/Release-watchos/DiveEngine.build/Objects-normal/arm64_32/DiveEngine.swiftmodule",
+    "swiftsourceinfo" : "/Users/cortexys/Projects/dive-computer-watch/DiveEngine/build/DiveEngine.build/Release-watchos/DiveEngine.build/Objects-normal/arm64_32/DiveEngine.swiftsourceinfo"
+  }
+}
