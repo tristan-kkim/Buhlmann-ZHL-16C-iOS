@@ -1,0 +1,26 @@
+# 보안 기준선 스캔 — 공용 재사용 워크플로 호출
+#
+# 실제 내용은 cortexys.web/.github/workflows/security-scan.yml 한 곳에 있다.
+# 리포마다 복사하면 도구 버전과 예외 목록이 갈라지고, 한쪽만 고치는 순간
+# 기준선이 기준선이 아니게 된다. 설계와 근거는 그 리포의
+# docs/SECURITY_BASELINE.md.
+#
+# 기본은 보고 전용이다. 검출돼도 job 은 실패하지 않는다.
+# 차단으로 바꾸려면 이 리포에 변수 SECURITY_ENFORCE=true 를 두고,
+# 브랜치 보호 규칙에 이 체크를 추가한다 (둘 다 필요하다).
+#
+# push: main 은 일부러 넣지 않았다 — 관제 대시보드가 리포별 "가장 최근 실행"을
+# 파이프라인 상태로 쓰기 때문에, push 에 걸면 빨간 CI 를 초록 Security 가 덮을 수 있다.
+name: Security
+
+on:
+  pull_request:
+  schedule:
+    - cron: "0 20 * * 0"   # 매주 월요일 05:00 KST
+  workflow_dispatch:
+
+jobs:
+  scan:
+    uses: tristan-kkim/cortexys.web/.github/workflows/security-scan.yml@main
+    permissions:
+      contents: read

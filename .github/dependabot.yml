@@ -1,0 +1,32 @@
+# 의존성 취약점 — 보안 기준선 §1
+# (cortexys.web/docs/SECURITY_BASELINE.md)
+#
+# Dependabot 은 GitHub 이 리포 밖에서 돌리므로 재사용 워크플로에 넣을 수 없다.
+# 그래서 이 파일만은 리포마다 둔다.
+#
+# cooldown: 갓 올라온 버전은 며칠 두고 본다. 공급망 공격은 배포 직후
+# 몇 시간~며칠 안에 발견되고 철회되는 경우가 많다.
+version: 2
+updates:
+  - package-ecosystem: swift
+    directory: "/"
+    schedule:
+      interval: weekly
+      day: monday
+      time: "09:00"
+      timezone: Asia/Seoul
+    open-pull-requests-limit: 5
+    cooldown:
+      default-days: 5
+
+  - package-ecosystem: github-actions
+    directory: "/"
+    schedule:
+      interval: weekly
+      day: monday
+      time: "09:00"
+      timezone: Asia/Seoul
+    open-pull-requests-limit: 5
+    cooldown:
+      default-days: 5
+
