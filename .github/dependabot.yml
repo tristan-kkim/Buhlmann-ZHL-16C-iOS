@@ -15,7 +15,14 @@ updates:
       day: monday
       time: "09:00"
       timezone: Asia/Seoul
-    open-pull-requests-limit: 5
+    open-pull-requests-limit: 3
+    # minor·patch 는 한 PR 로 묶는다. 묶지 않으면 패키지마다 PR 이 따로 열리고,
+    # PR 마다 CI·보안 스캔이 돌아 계정 동시 실행 한도를 채운다
+    # (2026-09-21 첫 활성화 때 12개 리포에서 PR 75개·대기 실행 86개가 한꺼번에 생겨
+    #  운영 배포 CI 까지 큐에 막혔다).
+    groups:
+      minor-and-patch:
+        update-types: [minor, patch]
     cooldown:
       default-days: 5
 
@@ -26,7 +33,14 @@ updates:
       day: monday
       time: "09:00"
       timezone: Asia/Seoul
-    open-pull-requests-limit: 5
+    open-pull-requests-limit: 3
+    # minor·patch 는 한 PR 로 묶는다. 묶지 않으면 패키지마다 PR 이 따로 열리고,
+    # PR 마다 CI·보안 스캔이 돌아 계정 동시 실행 한도를 채운다
+    # (2026-09-21 첫 활성화 때 12개 리포에서 PR 75개·대기 실행 86개가 한꺼번에 생겨
+    #  운영 배포 CI 까지 큐에 막혔다).
+    groups:
+      minor-and-patch:
+        update-types: [minor, patch]
     cooldown:
       default-days: 5
 
