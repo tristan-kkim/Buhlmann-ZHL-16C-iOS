@@ -38,6 +38,11 @@ updates:
     # PR 마다 CI·보안 스캔이 돌아 계정 동시 실행 한도를 채운다
     # (2026-09-21 첫 활성화 때 12개 리포에서 PR 75개·대기 실행 86개가 한꺼번에 생겨
     #  운영 배포 CI 까지 큐에 막혔다).
+    ignore:
+      # 공용 보안 스캔 재사용 워크플로(비공개 리포, @main 고정)는 Dependabot 이 읽을 권한이 없어
+      # github_actions 업데이트 잡이 git_dependencies_not_reachable 로 실패했다 (2026-09-22).
+      # 브랜치 고정이라 올릴 버전도 없으므로 제외한다.
+      - dependency-name: "tristan-kkim/cortexys.web*"
     groups:
       minor-and-patch:
         update-types: [minor, patch]
